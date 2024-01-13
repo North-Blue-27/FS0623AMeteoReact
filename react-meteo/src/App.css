@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.search-container {
+  margin-right: 10px; /* Modifica il valore a seconda della tua preferenza */
+}
+
+.search-bar{
+  margin-right: 5px;
+}
