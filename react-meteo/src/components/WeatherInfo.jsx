@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const WeatherInfo = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -15,32 +15,32 @@ const WeatherInfo = () => {
           fetchForecastData(latitude, longitude);
         },
         (error) => {
-          setError('Error fetching location: ' + error.message);
+          setError("Error fetching location: " + error.message);
         }
       );
     };
 
     const fetchWeatherData = async (lat, lon) => {
       try {
-        const apiKey = '1274413dc7afda142ec57b170adff4da';
+        const apiKey = "1274413dc7afda142ec57b170adff4da";
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=it&appid=${apiKey}`
         );
         setWeatherData(response.data);
       } catch (error) {
-        setError('Error fetching weather data: ' + error.message);
+        setError("Error fetching weather data: " + error.message);
       }
     };
 
     const fetchForecastData = async (lat, lon) => {
       try {
-        const apiKey = '1274413dc7afda142ec57b170adff4da';
+        const apiKey = "1274413dc7afda142ec57b170adff4da";
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&lang=it&appid=${apiKey}`
         );
         setForecastData(response.data);
       } catch (error) {
-        setError('Error fetching forecast data: ' + error.message);
+        setError("Error fetching forecast data: " + error.message);
       }
     };
 
@@ -60,9 +60,9 @@ const WeatherInfo = () => {
   }
 
   // Estrai solo gli orari desiderati per il prossimo giorno (00:00, 12:00, 20:00)
-  const desiredHours = ['00:00:00', '12:00:00', '20:00:00'];
+  const desiredHours = ["00:00:00", "12:00:00", "20:00:00"];
   const filteredForecast = forecastData.list.filter((forecast) => {
-    const forecastHour = forecast.dt_txt.split(' ')[1];
+    const forecastHour = forecast.dt_txt.split(" ")[1];
     return desiredHours.includes(forecastHour);
   });
 

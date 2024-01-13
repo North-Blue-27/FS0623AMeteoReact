@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const UseWeatherData = () => {
   const [weatherData, setWeatherData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const clearData = () => {
     setWeatherData([]);
     setLoading(false);
-    setError('');
+    setError("");
   };
 
   return {

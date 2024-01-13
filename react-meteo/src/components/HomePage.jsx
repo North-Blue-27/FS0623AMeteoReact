@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, Container } from 'react-bootstrap';
+import React from "react";
+import { Card, Container } from "react-bootstrap";
 
 const HomePage = () => {
   return (
@@ -11,11 +11,14 @@ const HomePage = () => {
         <Card.Body>
           <Card.Title>Esplora le previsioni del tempo</Card.Title>
           <Card.Text>
-          Scopri previsioni meteorologiche accurate per le città di tutto il mondo.
-             Inserisci semplicemente la città desiderata nella barra di ricerca per iniziare.
+            Scopri previsioni meteorologiche accurate per le città di tutto il
+            mondo. Inserisci semplicemente la città desiderata nella barra di
+            ricerca per iniziare.
           </Card.Text>
         </Card.Body>
-        <Card.Footer className="text-muted">Inizia ora il tuo viaggio meteo!</Card.Footer>
+        <Card.Footer className="text-muted">
+          Inizia ora il tuo viaggio meteo!
+        </Card.Footer>
       </Card>
     </Container>
   );
